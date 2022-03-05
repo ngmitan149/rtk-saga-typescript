@@ -5,11 +5,18 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Router } from 'react-router-dom';
+import CssBaseline from '@mui/material/CssBaseline';
+import appHistory from 'utils/appHistory';
+// import { CssBaseline, ThemeProvider } from '@material-ui/core';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+        <Router history={appHistory}>
+          <CssBaseline />
+          <App />
+        </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
