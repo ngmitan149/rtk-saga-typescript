@@ -5,20 +5,6 @@ import * as React from 'react';
 import { selectIsLogging } from '../authSlice';
 import { authActions } from '../authSlice';
 
-// const useStyles = makeStyles((theme: Theme) => ({
-//   root: {
-//     display: 'flex',
-//     flexFlow: 'row nowrap',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     minHeight: '100vh',
-//   },
-
-//   box: {
-//     padding: theme.spacing(3),
-//   },
-// }));
-
 export default function LoginPage() {
   const dispatch = useAppDispatch();
   const isLogging = useAppSelector(selectIsLogging);

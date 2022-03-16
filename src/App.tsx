@@ -9,9 +9,7 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path='/' exact>
-          <Redirect to='/login'/>
-        </Route>
+        <Redirect exact from="/" to="/login" />
         <Route path='/login'>
           <LoginPage/>
         </Route>

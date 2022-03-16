@@ -7,7 +7,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { styled } from '@mui/material/styles';
-import React, { ReactNode } from 'react';
+import React, { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
 interface ModuleList {
@@ -15,7 +15,7 @@ interface ModuleList {
   name: string,
   path: string,
   selected?: boolean,
-  icon?: ReactNode,
+  icon?: ReactElement,
 }
 
 const moduleList: ModuleList[] = [
@@ -34,8 +34,6 @@ const moduleList: ModuleList[] = [
 ]
 
 export function Sidebar() {
-
-
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">

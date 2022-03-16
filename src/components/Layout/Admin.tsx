@@ -52,7 +52,9 @@ const LayoutWrapper = styled(Box)(({ theme }) => `
   grid-template-columns: auto 1fr;
   grid-template-areas: "header header" "sidebar main";
 
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 `)
 
 const HeaderWrapper = styled(Box)(({ theme }) => `
@@ -86,6 +88,7 @@ const MainWrapper = styled(Box)(({ theme }) => `
 
   grid-area: main;
   padding: ${theme.spacing(2, 3)};
+  overflow: auto;
 
   background-color: ${theme.palette.background.paper};
 `)

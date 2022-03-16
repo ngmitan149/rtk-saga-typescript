@@ -1,4 +1,4 @@
 export interface City {
-  code: number,
+  code: string | number,
   name: string
 }

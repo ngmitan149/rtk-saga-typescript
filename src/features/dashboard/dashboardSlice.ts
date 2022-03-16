@@ -10,8 +10,9 @@ export interface DashboardStatistics {
 }
 
 export interface RankingbyCity {
-  cityId: string,
-  rankingList: Student[]
+  cityId: string | number,
+  cityName: string,
+  rankingList: Student[],
 }
 
 export interface DashboardState {
@@ -51,13 +52,13 @@ const dashboardSlice = createSlice({
     setStatistics(state, action: PayloadAction<DashboardStatistics>) {
       state.statistics = action.payload
     },
-    setHighesStudentList(state, action: PayloadAction<Student[]>) {
+    setHighestStudentList(state, action: PayloadAction<Student[]>) {
       state.highestStudentList = action.payload
     },
     setLowestStudentList(state, action: PayloadAction<Student[]>) {
       state.lowestStudentLIst = action.payload
     },
-    setRankingByCity(state, action: PayloadAction<RankingbyCity[]>) {
+    setRankingByCityList(state, action: PayloadAction<RankingbyCity[]>) {
       state.rankingByCity = action.payload
     },
   }
