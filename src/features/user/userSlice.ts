@@ -32,7 +32,7 @@ const initialState: UserState = userAdapter.getInitialState({
   filter: {
     _page: 1,
     _limit: 15,
-    name_like: undefined,
+    username_like: undefined,
   },
   pagination: {
     _page: 1,

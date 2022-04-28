@@ -8,6 +8,7 @@ import { ListParams, User } from 'models';
 import React, { useEffect } from 'react';
 import { Link, useHistory, useRouteMatch } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import UserFilters from '../components/UserFilters';
 // import UserFilters from '../components/UserFilters';
 import UserTable from '../components/UserTable';
 import { selectUserFilter, selectUserList, selectUserLoading, selectUserPagination, userActions } from '../userSlice';
@@ -76,12 +77,11 @@ export default function Listpage (_props: ListpageProps) {
       </TitleContaierStyled>
 
       <Box mb={3}>
-        {/* <UserFilters
+        <UserFilters
           filter={filter}
-          cityList={cityList}
           onChange={handleFilterChange}
           onSearchChange={handleSearchChange}
-        /> */}
+        />
       </Box>
 
       {/* User Table */}
