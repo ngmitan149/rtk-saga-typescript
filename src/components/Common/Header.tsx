@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { authActions } from 'features/auth/authSlice';
+import { userActions } from 'features/user/userSlice';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -18,7 +18,7 @@ export function Header(props: HeaderProps) {
   const dispatch = useDispatch()
 
   const handleLogoutClick = () => {
-    dispatch(authActions.logout())
+    dispatch(userActions.logout())
   }
 
   return (

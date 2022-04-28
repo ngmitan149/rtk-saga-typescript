@@ -7,7 +7,7 @@ function* fetchCityList() {
   try {
     const response: ListResponse<City> = yield call(cityApi.getAll);
     yield put(cityActions.fetchCityListSuccess(response));
-  } catch (error) {
+  } catch (error: any) {
     console.log('Failed to fetch city list', error);
     yield put(cityActions.fetchCityListFailed());
   }

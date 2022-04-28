@@ -1,0 +1,126 @@
+{
+  "cities": [
+    {
+      "code": "hcm",
+      "name": "Hồ Chí Minh"
+    },
+    {
+      "code": "hn",
+      "name": "Hà Nội"
+    },
+    {
+      "code": "dn",
+      "name": "Đà Nẵng"
+    },
+    {
+      "code": "pt",
+      "name": "Phan Thiết"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "tan",
+      "email": "tan@email.com",
+      "password": "tan",
+      "role": 0
+    },
+    {
+      "username": "tan 1",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 1,
+      "createdAt": 1651130562444,
+      "updatedAt": 1651130562444,
+      "id": 2
+    },
+    {
+      "username": "tan 2",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 0,
+      "createdAt": 1651130742971,
+      "updatedAt": 1651130742971,
+      "id": 3
+    },
+    {
+      "username": "tan 3",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 0,
+      "createdAt": 1651130876205,
+      "updatedAt": 1651130876205,
+      "id": 4
+    },
+    {
+      "username": "tan 4",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 0,
+      "createdAt": 1651131022459,
+      "updatedAt": 1651131022459,
+      "id": 5
+    },
+    {
+      "username": "tan 5",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 0,
+      "createdAt": 1651131214060,
+      "updatedAt": 1651131214060,
+      "id": 6
+    }
+  ],
+  "students": [
+    {
+      "city": "hcm",
+      "gender": "male",
+      "mark": 5,
+      "age": 19,
+      "name": "Test 1",
+      "createdAt": 1647661237491,
+      "updatedAt": 1651118457437,
+      "id": 1
+    },
+    {
+      "city": "hcm",
+      "gender": "female",
+      "mark": 5,
+      "age": 19,
+      "name": "Test 2",
+      "createdAt": 1651116334653,
+      "updatedAt": 1651116334653,
+      "id": 2
+    },
+    {
+      "city": "dn",
+      "gender": "male",
+      "mark": 8,
+      "age": 19,
+      "name": "Test 3",
+      "createdAt": 1651118585208,
+      "updatedAt": 1651118585208,
+      "id": 3
+    },
+    {
+      "city": "pt",
+      "gender": "female",
+      "mark": 9,
+      "age": 20,
+      "name": "Test 4",
+      "createdAt": 1651118600959,
+      "updatedAt": 1651118600959,
+      "id": 4
+    },
+    {
+      "city": "hn",
+      "gender": "male",
+      "mark": 9.5,
+      "age": 23,
+      "name": "Test 5",
+      "createdAt": 1651118749384,
+      "updatedAt": 1651118749384,
+      "id": 5
+    }
+  ]
+}

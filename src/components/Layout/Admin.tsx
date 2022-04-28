@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { createElement, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { Header, Sidebar } from 'components/Common';
 import { Route, Switch } from 'react-router-dom';
-import Dashboard from 'features/dashboard';
-import Students from 'features/students';
+import { moduleList } from 'utils';
+import allModules from 'features';
 
 export interface AdminLayoutProps {
 }
@@ -27,13 +27,14 @@ export function AdminLayout (_props: AdminLayoutProps) {
       </SidebarWrapper>
       <MainWrapper>
         <Switch>
-          <Route path='/admin/dashboard'>
-            <Dashboard/>
-          </Route>
-
-          <Route path='/admin/students'>
-            <Students/>
-          </Route>
+          {moduleList.map(m => {
+            const Component = allModules[m.component]
+            return (
+              <Route path={m.path} key={m.id}>
+                <Component/>
+              </Route>
+            )
+          })}
 
           <Route>
             <div>

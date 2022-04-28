@@ -87,12 +87,12 @@ export default function StudentForm ({ initialValues, onSubmit }: StudentFormPro
         <RadioField name="gender" control={control} label="Gender" options={genderOptions} />
         <InputField name="mark" control={control} label="Mark" />
         {Array.isArray(cityOptions) && cityOptions.length > 0 && (
-          <SelectField name="city" control={control} label="City" options={cityOptions} />
+          <SelectFieldStyled name="city" control={control} label="City" options={cityOptions} />
         )}
 
         {error && <Alert severity="error">{error}</Alert>}
 
-        <Box mt={3}>
+        <Box mt={2}>
           <Button type="submit" variant="contained" color="primary" disabled={isSubmitting}>
             {isSubmitting && <CircularProgress size={16} color="primary" />}
             &nbsp;Save

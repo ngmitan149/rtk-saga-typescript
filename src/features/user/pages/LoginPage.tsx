@@ -1,23 +1,27 @@
 import { Button, CircularProgress, Paper, Typography, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
+import { Auth } from 'models';
 import * as React from 'react';
-import { selectIsLogging } from '../authSlice';
-import { authActions } from '../authSlice';
+import { selectIsLogging } from '../userSlice';
+import { userActions } from '../userSlice';
+import LoginForm from '../components/LoginForm';
 
 export default function LoginPage() {
   const dispatch = useAppDispatch();
-  const isLogging = useAppSelector(selectIsLogging);
 
-  const handleLoginClick = () => {
+  const handleLoginClick = (formValues: Auth) => {
     // TODO: Get username + pwd from login form
     dispatch(
-      authActions.login({
-        username: '',
-        password: '',
-      })
+      userActions.login(formValues)
     );
   };
+
+  const loginFormValues: Auth = {
+    username: '',
+    password: ''
+  }
+
 
   return (
     <LoginWrapper>
@@ -26,11 +30,10 @@ export default function LoginPage() {
           Student Management
         </Typography>
 
-        <Box mt={4}>
-          <Button fullWidth variant="contained" color="primary" onClick={handleLoginClick}>
-            {isLogging && <CircularProgress size={20} color="secondary" />} &nbsp; Fake Login
-          </Button>
-        </Box>
+        <LoginForm
+          initialValues={loginFormValues}
+          onSubmit={handleLoginClick}
+        />
       </CustomizedPaper>
     </LoginWrapper>
   );

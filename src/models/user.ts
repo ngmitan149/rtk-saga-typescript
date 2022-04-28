@@ -1,4 +1,11 @@
 export interface User {
   id: number | string;
-  name: string;
+  username: string;
+  password?: string;
+  email: string;
+  role?: number;
 }
+
+// export interface UserForm extends User {
+//   password: string
+// }
