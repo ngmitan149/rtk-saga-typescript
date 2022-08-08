@@ -10,6 +10,14 @@ const middlewares = jsonServer.defaults()
 const SECRET_KEY = 'sunflower123'
 const expiresIn = '24h'
 
+function timeOut(time = 500) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('done')
+    }, time);
+  })
+}
+
 // Create a token from a payload 
 function createToken(payload){
   return jwt.sign(payload, SECRET_KEY, {expiresIn})
@@ -40,11 +48,17 @@ function getUser({username, password}){
   return db.users.find(user => user.username === username && user.password === password)
 }
 
+server.use(async (_req, _res, next) => {
+  await timeOut()
+  next()
+})
+
 server.use(middlewares)
 
 server.get('/echo', (req, res) => {
   res.jsonp(req.query);
 });
+
 
 server.use(jsonServer.bodyParser);
 

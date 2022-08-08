@@ -31,7 +31,7 @@
       "password": "tan",
       "role": 1,
       "createdAt": 1651130562444,
-      "updatedAt": 1651130562444,
+      "updatedAt": 1657770857010,
       "id": 2
     },
     {
@@ -69,6 +69,15 @@
       "createdAt": 1651131214060,
       "updatedAt": 1651131214060,
       "id": 6
+    },
+    {
+      "username": "tan 4",
+      "email": "ngmitan149@gmail.com",
+      "password": "tan",
+      "role": 0,
+      "createdAt": 1657793060061,
+      "updatedAt": 1657793060061,
+      "id": 7
     }
   ],
   "students": [
