@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rtk-saga-typescript/static/css/main.e240bef1.css",
+    "main.js": "/rtk-saga-typescript/static/js/main.a85c9273.js",
+    "index.html": "/rtk-saga-typescript/index.html",
+    "main.e240bef1.css.map": "/rtk-saga-typescript/static/css/main.e240bef1.css.map",
+    "main.a85c9273.js.map": "/rtk-saga-typescript/static/js/main.a85c9273.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e240bef1.css",
+    "static/js/main.a85c9273.js"
+  ]
+}
